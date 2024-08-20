@@ -17,7 +17,7 @@ const TestArea = () => {
     const form = useRef();
 
     useEffect(() => {
-        fetch('https://cypherschoolsassignment.onrender.com/mcqs', {
+        fetch('https://cipherschoolassignment-0jto.onrender.com/mcqs', {
             method: "GET",
             headers: {
                 "Authorization": state.token,
@@ -78,7 +78,7 @@ const TestArea = () => {
                 console.error('Email failed to send', error);
             });
 
-            fetch("https://cypherschoolsassignment.onrender.com/save-score", {
+            fetch("https://cipherschoolassignment-0jto.onrender.com/save-score", {
                 method: "POST",
                 body: JSON.stringify(data),
                 headers: {
