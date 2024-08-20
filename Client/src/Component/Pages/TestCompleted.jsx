@@ -6,7 +6,7 @@ const TestCompleted = () => {
     const [score, setScore] = useState(2);
 
     useEffect(() => {
-        fetch('http://localhost:3000/getScore', {
+        fetch('https://cypherschoolsassignment.onrender.com/getScore', {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`
