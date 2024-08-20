@@ -10,14 +10,14 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB connection
-mongoose
-  .connect(process.env.MONGODB_URL)
+mongoose.connect("mongodb+srv://tarunsabharwal2003:tinku2003@cipher.aold6.mongodb.net/?retryWrites=true&w=majority&appName=cipher")
   .then(() => {
     console.log("Database connected successfully...");
   })
-  .catch(() => {
-    console.log("Something went wrong while connecting to the database...");
+  .catch((error) => {
+    console.error("Something went wrong while connecting to the database...", error);
   });
+
 
 // User Schema
 const userSchema = mongoose.Schema({

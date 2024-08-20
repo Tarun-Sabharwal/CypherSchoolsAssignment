@@ -21,7 +21,7 @@ const Login = () => {
         if (data.email.trim() === '') {
             emailerror = 'Email field should be filled';
         } else if (!emailRegex.test(data.email)) {
-            emailerror = 'Enter valid Email';
+            emailerror = 'Enter a valid Email';
         }
 
         if (data.password.trim() === '') {
@@ -58,46 +58,82 @@ const Login = () => {
     };
 
     return (
-        <div className="container">
-            <h2 className="text-center text-primary">Login Form</h2>
-            <form className="form w-50 mx-auto" onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <label htmlFor="email">Email:</label>
+        <div style={{
+            backgroundColor: '#1E1E1E',
+            color: '#E0E0E0',
+            padding: '20px',
+            borderRadius: '8px',
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
+            width: '50%',
+            margin: 'auto',
+            marginTop: '50px',
+            fontFamily: 'Arial, sans-serif'
+        }}>
+            <h2 style={{ textAlign: 'center', color: '#FFD700' }}>Login Form</h2>
+            <form onSubmit={handleSubmit}>
+                <div style={{ marginBottom: '15px' }}>
+                    <label htmlFor="email" style={{ display: 'block', marginBottom: '5px', color: '#FFD700' }}>Email:</label>
                     <input
                         type="email"
                         id="email"
                         name="email"
                         placeholder="Enter Email"
-                        className="form-control"
+                        style={{
+                            width: '100%',
+                            padding: '10px',
+                            borderRadius: '4px',
+                            border: '1px solid #333',
+                            backgroundColor: '#2C2C2C',
+                            color: '#E0E0E0',
+                            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)'
+                        }}
                         value={data.email}
                         onChange={handleData}
                     />
-                    <p className="text-danger">{error.email !== '' ? error.email : ''}</p>
+                    <p style={{ color: 'red', marginTop: '5px' }}>{error.email}</p>
                 </div>
 
-                <div className="form-group">
-                    <label htmlFor="pass">Password:</label>
+                <div style={{ marginBottom: '15px' }}>
+                    <label htmlFor="pass" style={{ display: 'block', marginBottom: '5px', color: '#FFD700' }}>Password:</label>
                     <input
                         type="password"
                         id="pass"
                         name="password"
                         placeholder="Enter Password"
-                        className="form-control"
+                        style={{
+                            width: '100%',
+                            padding: '10px',
+                            borderRadius: '4px',
+                            border: '1px solid #333',
+                            backgroundColor: '#2C2C2C',
+                            color: '#E0E0E0',
+                            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)'
+                        }}
                         value={data.password}
                         onChange={handleData}
                     />
-                    <p className="text-danger">{error.password !== '' ? error.password : ''}</p>
+                    <p style={{ color: 'red', marginTop: '5px' }}>{error.password}</p>
                 </div>
 
-                <div className="d-flex justify-content-center mt-3">
-                    <button className="btn btn-dark w-75" type="submit">
+                <div style={{ textAlign: 'center', marginTop: '20px' }}>
+                    <button type="submit" style={{
+                        padding: '10px 20px',
+                        borderRadius: '4px',
+                        border: 'none',
+                        backgroundColor: '#FFD700',
+                        color: '#000',
+                        fontSize: '16px',
+                        cursor: 'pointer',
+                        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
+                        transition: 'background-color 0.3s ease'
+                    }}>
                         Login
                     </button>
                 </div>
 
-                <div className="mt-3 mb-0">
-                    <p className="text-center">
-                        Don't have an account? <Link to="/register">Register here</Link>
+                <div style={{ textAlign: 'center', marginTop: '20px' }}>
+                    <p style={{ color: '#E0E0E0' }}>
+                        Don't have an account? <Link to="/register" style={{ color: '#FFD700' }}>Register here</Link>
                     </p>
                 </div>
             </form>

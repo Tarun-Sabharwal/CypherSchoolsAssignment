@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #f0f4f8; /* Light background for the entire section */
+    padding: 20px;
+    min-height: 100vh; /* Ensure it covers the viewport height */
 }
 
 .complete-message-container {
@@ -11,20 +14,25 @@
 
 .complete-title {
     font-size: 2.5rem;
-    color: #007bff;
+    color: #007bff; /* Vibrant blue color */
+    margin-bottom: 1rem; /* Spacing below the title */
+    font-weight: bold; /* Make title bold */
 }
 
 .complete-card {
-    background-color: #f8f9fa;
+    background-color: #ffffff; /* White background for card */
     padding: 2rem;
     margin-top: 1rem;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow for card */
+    width: 90%; /* Ensure card is responsive */
+    max-width: 600px; /* Max width for better readability */
 }
 
 .complete-text {
     font-size: 1.2rem;
-    color: #333;
+    color: #444; /* Darker text for better readability */
+    line-height: 1.5; /* Improved line spacing */
 }
 
 .webcam {
@@ -33,6 +41,8 @@
     right: 1rem;
     width: 150px; /* Adjust the size as needed */
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border: 3px solid #007bff; /* Add a border with primary color */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow for webcam */
     z-index: 1000;
+    background-color: #ffffff; /* White background for webcam */
 }
